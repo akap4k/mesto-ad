@@ -1,25 +1,32 @@
 {
-  "name": "mesto-ad",
+  "name": "mesto-project",
   "version": "1.0.0",
-  "description": "Стартовый набор для выполнения проектной работы Место",
-  "main": "index.js",
+  "description": "Учебный проект Mesto - интерактивная страница с карточками мест",
+  "main": "src/scripts/index.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "preview": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Nutewel/mesto-ad.git"
+    "url": "git+https://github.com/akap4k/mesto-project.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "javascript",
+    "html",
+    "css",
+    "vite",
+    "bem"
+  ],
+  "author": "akap4k",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
-    "url": "https://github.com/Nutewel/mesto-ad/issues"
+    "url": "https://github.com/akap4k/mesto-project/issues"
   },
-  "homepage": "https://github.com/Nutewel/mesto-ad#readme",
+  "homepage": "https://github.com/akap4k/mesto-project#readme",
   "devDependencies": {
     "vite": "^7.3.1"
   }
