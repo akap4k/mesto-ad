@@ -1,5 +1,5 @@
 {
-  "name": "mesto-project",
+  "name": "mesto-ad",
   "version": "1.0.0",
   "description": "Учебный проект Mesto - интерактивная страница с карточками мест",
   "main": "src/scripts/index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/akap4k/mesto-project.git"
+    "url": "git+https://github.com/akap4k/mesto-ad.git"
   },
   "keywords": [
     "javascript",
@@ -24,10 +24,11 @@
   "license": "ISC",
   "type": "module",
   "bugs": {
-    "url": "https://github.com/akap4k/mesto-project/issues"
+    "url": "https://github.com/akap4k/mesto-ad/issues"
   },
-  "homepage": "https://github.com/akap4k/mesto-project#readme",
+  "homepage": "https://github.com/akap4k/mesto-ad#readme",
   "devDependencies": {
     "vite": "^7.3.1"
   }
 }
+
