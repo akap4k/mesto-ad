@@ -1,4 +1,3 @@
-// card.js - функция создания карточки
 
 // Получаем шаблон карточки из index.html
 const cardTemplate = document.querySelector('#card-template');
