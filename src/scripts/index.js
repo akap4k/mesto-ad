@@ -115,3 +115,24 @@ const allPopups = document.querySelectorAll(".popup");
 allPopups.forEach((popup) => {
   setCloseModalWindowEventListeners(popup);
 });
+
+
+Promise.all([getCardList(), getUserInfo()])
+  .then(([cards, userData]) => {
+    // Сохраняем ID текущего пользователя глобально
+    currentUserId = userData._id;
+    
+    // Обновляем данные профиля
+    profileName.textContent = userData.name;
+    profileDescription.textContent = userData.about;
+    profileAvatar.src = userData.avatar;
+    
+    // делаем карточки
+    cards.forEach((card) => {
+      const cardElement = createCard(card, currentUserId);
+      cardsContainer.append(cardElement);
+    });
+  })
+  .catch((err) => {
+    console.log(err);
+  });
