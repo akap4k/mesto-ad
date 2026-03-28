@@ -120,7 +120,7 @@ function handleCardFormSubmit(evt) {
   })
     .then((newCard) => {
       // Создаем карточку и добавляем в начало списка
-      const cardElement = createCard(newCard, currentUserId);
+      const cardElement = createCard(newCard, currentUserId, deleteCard, changeLikeCardStatus);
       cardsContainer.prepend(cardElement);
       
       // Закрываем модальное окно и очищаем форму
@@ -212,7 +212,7 @@ Promise.all([getCardList(), getUserInfo()])
     
     // Отрисовываем каждую карточку
     cards.forEach((card) => {
-      const cardElement = createCard(card, currentUserId);
+      const cardElement = createCard(card, currentUserId, deleteCard, changeLikeCardStatus);
       cardsContainer.append(cardElement);
     });
   })
