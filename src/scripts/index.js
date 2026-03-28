@@ -5,6 +5,8 @@
 
   Из index.js не допускается что то экспортировать
 */
+import { getUserInfo, getCardList, setUserInfo, setUserAvatar, addNewCard, deleteCard, changeLikeCardStatus } from './components/api.js';
+
 
 import { initialCards } from "./cards.js";
 import { createCardElement, deleteCard, likeCard } from "./components/card.js";
