@@ -13,6 +13,35 @@ export function createCard(cardData, userId) {
   const likeButton = cardElement.querySelector('.card__like-button');
   const likeCount = cardElement.querySelector('.card__like-count');
   const deleteButton = cardElement.querySelector('.card__delete-button');
+
+    likeButton.addEventListener('click', () => {
+    const isCurrentlyLiked = likeButton.classList.contains('card__like-button_is-active');
+    
+    changeLikeCardStatus(cardData._id, isCurrentlyLiked)
+      .then((updatedCard) => {
+        // Обновляем счетчик лайков
+        likeCount.textContent = updatedCard.likes.length;
+        // Переключаем класс кнопки
+        likeButton.classList.toggle('card__like-button_is-active');
+      })
+      .catch((err) => {
+        console.log('Ошибка при лайке:', err);
+      });
+  });
+  
+  // Обработчик удаления
+  if (deleteButton) {
+    deleteButton.addEventListener('click', () => {
+      deleteCard(cardData._id)
+        .then(() => {
+          // Удаляем карточку из DOM
+          cardElement.remove();
+        })
+        .catch((err) => {
+          console.log('Ошибка при удалении:', err);
+        });
+    });
+  }
   
   // Заполняем данные из сервера
   cardImage.src = cardData.link;
